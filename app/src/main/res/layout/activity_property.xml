@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PropertyActivity"
+    android:background="@drawable/setting">
+
+    <RelativeLayout
+        android:id="@+id/toolbarBox"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#B1170A">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#030A50">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/profile_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:text="@string/app_name"
+                    android:textColor="#ffffff"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarBox">
+
+    <LinearLayout
+        android:id="@+id/layoutBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="300sp"
+            android:layout_height="200sp"
+            android:id="@+id/PropertyView_image"
+            android:src="@drawable/noimage"
+            android:layout_margin="10dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PropertyView_Name"
+            android:text="Property Name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:id="@+id/info_price"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/pro_price"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PropertyView_price"
+                android:text="Price"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/info_price"
+                android:layout_marginLeft="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/locationBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/address_pic"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/pro_add"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/address_text"
+                    android:text="Location"
+                    android:textSize="10sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/address_pic"
+                    android:layout_toEndOf="@id/address_pic"
+                    android:layout_marginLeft="10dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PropertyView_address"
+                android:text="Address"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@id/locationBox"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/ownerBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/owner_pic"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/pro_owner"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/owner_text"
+                    android:text="Owned by"
+                    android:textSize="10sp"
+                    android:layout_toRightOf="@id/owner_pic"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/owner_pic"
+                    android:layout_marginLeft="10dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PropertyView_owner"
+                android:text="Owner"
+                android:layout_centerVertical="true"
+                android:layout_below="@id/ownerBox"
+                android:layout_marginLeft="30dp"
+                android:textColor="#000000"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/stateBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/state_text"
+                android:text="State"
+                android:textSize="10sp"
+                android:layout_marginLeft="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PropertyView_State"
+                android:text="State"
+                android:layout_marginLeft="30dp"
+                android:textColor="#000000"
+                android:layout_below="@id/state_text"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/typeBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/type_text"
+                android:text="Property Type"
+                android:textSize="10sp"
+                android:layout_marginLeft="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PropertyView_type"
+                android:text="Type"
+                android:layout_marginLeft="30dp"
+                android:textColor="#000000"
+                android:layout_below="@id/type_text"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/saleBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sale_text"
+                android:text="Property For"
+                android:textSize="10sp"
+                android:layout_marginLeft="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PropertyView_Sale"
+                android:text="Status"
+                android:layout_marginLeft="30dp"
+                android:textColor="#000000"
+                android:layout_below="@id/sale_text"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/detailBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/info_pic"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/pro_info"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detail_text"
+                    android:text="Info"
+                    android:textSize="10sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/info_pic"
+                    android:layout_marginLeft="10dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PropertyView_detail"
+                android:text="Details"
+                android:layout_marginLeft="30dp"
+                android:textColor="#000000"
+                android:layout_below="@id/detailBox"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/blank"
+                android:layout_below="@id/PropertyView_detail"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/PropertyNavigation"
+            android:layout_toLeftOf="@id/PropertyNavigation">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PropertyMessage"
+                android:background="@drawable/button_square"
+                android:textColor="@color/colorPrimaryDark"/>
+
+        </RelativeLayout>
+
+
+        <ImageButton
+            android:id="@+id/PropertyNavigation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/pro_navi"
+            android:background="@drawable/navi_bg"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

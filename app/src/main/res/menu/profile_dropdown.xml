@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_Feedback"
+        android:title="Feedback"/>
+
+    <item
+        android:id="@+id/action_setting"
+        android:title="Setting"/>
+
+    <item
+        android:id="@+id/action_DeleteAccount"
+        android:title="Delete Account"/>
+
+    <item
+        android:id="@+id/action_signOut"
+        android:title="Sign Out"/>
+
+
+</menu>

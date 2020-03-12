@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:id="@+id/list_Image"
+        android:src="@drawable/noimage"
+        android:layout_margin="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/list_Image"
+        android:layout_toEndOf="@id/list_Image"
+        android:layout_toStartOf="@id/button_box"
+        android:layout_toLeftOf="@id/button_box"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_Name"
+            android:text="Property Name"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_State"
+            android:text="Property State"
+            android:layout_below="@+id/list_Name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_date"
+            android:text="Property Date"
+            android:layout_below="@id/list_State"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <ImageButton
+            android:id="@+id/action_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/action_bg"
+            android:src="@drawable/action_remove"
+            android:visibility="visible"
+            android:layout_marginBottom="2dp"/>
+
+        <ImageButton
+            android:id="@+id/action_repost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/action_remove"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/action_bg"
+            android:src="@drawable/action_repost"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/action_extend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/action_remove"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/action_bg"
+            android:src="@drawable/action_extend"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/list_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="action"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_black"
+        android:visibility="gone"/>
+
+</RelativeLayout>

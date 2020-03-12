@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#21254a">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/profile_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textStyle="bold"
+                    android:textSize="24dp"
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#ffffff"/>
+
+                <ImageButton
+                    android:id="@+id/optionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_option"
+                    android:layout_alignParentRight="true"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/placeholder"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/colorPrimaryDark"/>
+
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/profile_image"
+                android:layout_toRightOf="@id/profile_image"
+                android:text="Username"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@id/profile_image"
+                android:layout_toRightOf="@id/profile_image"
+                android:layout_below="@id/username"
+                android:background="@drawable/button_background"
+                android:text="Edit profile"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Email Address"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:id="@+id/owned_bar"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="-5dp"
+            android:layout_marginLeft="-5dp"
+            android:background="@drawable/bar_button"
+            android:weightSum="2">
+
+            <ImageButton
+                android:id="@+id/property_available"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_available" />
+
+            <ImageButton
+                android:id="@+id/property_outdated"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_outdated" />
+
+        </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/owned_available"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/owned_outdated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"/>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

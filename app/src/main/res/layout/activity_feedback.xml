@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedbackActivity"
+    android:background="@drawable/setting">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/profile_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Feedback"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#ffffff"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:hint="Subject"
+            android:layout_marginTop="15dp"
+            android:id="@+id/subject"
+            android:padding="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:hint="Message"
+            android:layout_marginTop="15dp"
+            android:id="@+id/messageBox"
+            android:padding="10dp"
+            android:inputType="textMultiLine"
+            android:minLines="5"
+            android:maxLines="10"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/submitFeed"
+            android:text="Submit"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

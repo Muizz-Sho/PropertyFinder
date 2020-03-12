@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#21254a">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/profile_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="15dp"
+                        android:text="@string/app_name"
+                        android:textColor="#ffffff"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How to use?"
+                android:textSize="24dp"
+                android:background="#E20D0D"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="200dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/search" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/image1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search section"
+                    android:textStyle="bold"
+                    android:padding="3dp"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This section will view property that available around you. Search coverage can be change on the setting section."
+                    android:padding="3dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/image7"
+                    android:layout_width="200dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/filter" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/image7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Search Filter"
+                        android:textStyle="bold"
+                        android:padding="3dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This search box allows you to type in your specific search. It will show results depending on your input in the search box."
+                        android:padding="3dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="200dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/promote" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/image2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Promote section"
+                        android:textStyle="bold"
+                        android:padding="3dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This section will allow you to promote your property to be rent by other users. Photo should be uploaded at the edit property section after publish.Be sure to enable location to help other users locate your property"
+                        android:padding="3dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="200dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/setting1" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/image3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Setting tab"
+                        android:textStyle="bold"
+                        android:padding="3dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This section will redirect you to page where you can set your searching coverage."
+                        android:padding="3dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="200dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/setting2" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/image4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Setting Coverage"
+                        android:textStyle="bold"
+                        android:padding="3dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This section will allow you to change your coverage range by dragging the bar as you want. you will noticed the changes in searching section later"
+                        android:padding="3dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/image5"
+                    android:layout_width="200dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/feedback1" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/image5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Feedback tab"
+                        android:textStyle="bold"
+                        android:padding="3dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This section will redirect you to a form for you to fill with your feedback of this apps or improvement you want in future."
+                        android:padding="3dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/image6"
+                    android:layout_width="200dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/feedback" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/image6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Feedback Section"
+                        android:textStyle="bold"
+                        android:padding="3dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This section will required you to fill a form of what problem you facing when using this apps or improvement you wanted to see in future."
+                        android:padding="3dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

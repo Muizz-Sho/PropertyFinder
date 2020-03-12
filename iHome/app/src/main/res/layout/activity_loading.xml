@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".LoadingActivity"
+android:theme="@style/Theme.AppCompat.NoActionBar">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#F0EAEA">
+
+    <TextView
+        android:id="@+id/appsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#000000"
+        android:shadowDx="1.3"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:text="PropertyFinder"
+        android:textColor="#DA0E0E"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+
+
+</RelativeLayout>
